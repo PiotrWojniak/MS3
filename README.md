@@ -32,7 +32,7 @@ The assumption of the project is to show users how to prepare a meal easily and 
 
 # Design
 
-`{
+`<{
     "mockup": {
         "controls": {
             "control": [
@@ -70,7 +70,7 @@ The assumption of the project is to show users how to prepare a meal easily and 
     },
     "dependencies": [],
     "projectID": "file:///F:/MS3/MS3.bmpr"
-}`
+}>`
 
 ## Colours
 
