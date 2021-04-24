@@ -32,6 +32,46 @@ The assumption of the project is to show users how to prepare a meal easily and 
 
 # Design
 
+`{
+    "mockup": {
+        "controls": {
+            "control": [
+                {
+                    "ID": "233",
+                    "typeID": "SiteMap",
+                    "zOrder": "0",
+                    "measuredW": "1022",
+                    "measuredH": "550",
+                    "x": "1411",
+                    "y": "1372",
+                    "properties": {
+                        "text": "Home\n- Visitors\n-- Zero west\n-- Recipes\n-- Login/Register\n--- Add recipes\n--- Add rating\n--- Profile\n---- View own recipes\n---- Edit/delete own recipes\n--- Add coments\n--- Log out\n\n"
+                    }
+                }
+            ]
+        },
+        "attributes": {
+            "name": "Recipes",
+            "order": 1000023.6230137611,
+            "parentID": null,
+            "notes": null
+        },
+        "branchID": "Master",
+        "resourceID": "FFB63C7B-606F-4E26-99E3-B86144CAE6CA",
+        "mockupH": "550",
+        "mockupW": "1022",
+        "measuredW": "2433",
+        "measuredH": "1922",
+        "version": "1.0"
+    },
+    "groupOffset": {
+        "x": 0,
+        "y": 0
+    },
+    "dependencies": [],
+    "projectID": "file:///F:/MS3/MS3.bmpr"
+}`
+
 ## Colours
 
 
@@ -66,15 +106,11 @@ The assumption of the project is to show users how to prepare a meal easily and 
 # Testing
 
 
-### To validate java script.
-1. Value of clear marker has already been determined.
-+ Removing repeted code.
+### To validate Java Ccript.
 #### Warnings.
-1. 240, 283, 319, 355	Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (google, krakow, map, markers, infowindow)
-+ Need to be fixed in the future
+### To validate CSS
+#### Warnings
 
-1. Undefined variables - google, $, i
-+ All three variable is nesserly to run function
 
 ### Lighthouse
 
