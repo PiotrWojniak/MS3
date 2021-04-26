@@ -28,45 +28,7 @@ The aim of the project is to allow users to view and share their own recipes and
 | 8. | Only the administrator can moderate user input. The purpose of this assumption is to eliminate profanity that may appear in the comments or in the recipes themselves. | Only the administrator can moderate user input. The purpose of this assumption is to eliminate profanity that may appear in the comments or in the recipes themselves. |
 | 9. | Admin can add or change categories as needed. | Admin can add or change categories as needed.|
 
---- 
-### As a visitor I'd like to:
-1. Get easy and clear navigation betwain function.
-2. Find inspiration for meall.
-3. Know how to be more ecologically.
-4. View, sort and serch for dish idea with out registration.
-5. Create an account to comments and shere my own recipte.
-
-### As a registered user i'd like to:
-1. Add, edit or deleting my recipe.
-2. I would like to make sure that no other user can edit or delete my recipes.
-
-### As a admin i'd like to:
-1. Be able to view, edit and delete recipes posted on the site not created by me.
-2. Add, delete and edit categories depending on the users' needs.
-
-+ ## Project planning
-
-### Respond to the users and visitors expectation:
-> ### Visitor
-
-1. Switch betwain the functionality is provide by links button lockated on the top of the web page in navbar.
-2. The site presents different types of meals with different ingredients in the recipes tab.
-3. Ecological expectations are presented using zero waste techniques.
-4. View and serch for idea of recipt is provided by clicking button recipt at the top of the page in navbar.
-   + users can serch and sort the recipt after open the recipt view on the top.
-   + Serching and sorting is by type, ingridiens, country orgin.
-5. Registration if providing by button login/register lockated in navbar.
-
-> ### User
-1. After logging in to the website, the user can add recipes after clicking the add recipe tab.
-   + Adding and removing recipes posted by the user is possible after selecting the profile option, which is on the navigation bar.
-2. The user may edit and delete recipes only and exclusively added by himself. It is not possible to use these options in other users' recipes. Only Admnin can moderate all data input to elininate any profanity. 
-
->### Admin
-1. Only the administrator can moderate user input. The purpose of this assumption is to eliminate profanity that may appear in the comments or in the recipes themselves.
-2. Admin can add or change categories as needed.
 ---
-
 # ***Design***
 
 + Side map
@@ -83,14 +45,42 @@ The aim of the project is to allow users to view and share their own recipes and
 + Blood Red #680000 - Navbar and footer
 
 ### Font
-+ Roboto:ital - to set as defoult style
-+ Tangerine - to style all headings and paragraph - is very similar to the font using in old historical books.
++ Irish growing - to set logo name
++ Roboto Slab - to set as defoult style
 + Bodoni Moda - to style inside button text and navigation bar menu.
-+ Gothambook - to style displayed info about atraction on marker.
 
-## Image
+### Wireframe
+The wireframe model is created as part of the project planning. Its task is to graphically present the appearance of the application on three different devices: computer - high resolution, tablet - medium resolution, telephone - low resolution. The application will be built on the basis of the created sketch
 
-## Icon
+<details>
+   <summary>Home</summary>
+   <img src="https://images89.fotosik.pl/496/1c97f88843e4117d.png">
+</details>
+<details>
+   <summary>Zero waste</summary>
+   <img src="https://images92.fotosik.pl/496/b5eeade1b3af3097.png">
+</details>
+<details>
+   <summary>Recipes</summary>
+   <img src="https://images91.fotosik.pl/495/6665b81495e77f77.png">
+</details>
+<details>
+   <summary>Registration/Login</summary>
+   <img src="https://images90.fotosik.pl/495/c5a11a229b49f7d3.png">
+</details>
+<details>
+   <summary>Add recipes</summary>
+   <img src="https://images91.fotosik.pl/495/abbc2ee9175d7b15.png">
+</details>
+<details>
+   <summary>Profile</summary>
+   <img src="https://images89.fotosik.pl/496/f5b9f0f2bab88b68.png">
+</details>
+<details>
+   <summary>Edit</summary>
+   <img src="https://images91.fotosik.pl/495/a21c5e0cc25c8c08.png">
+</details>
+
 ---
 # ***Features***
 
@@ -106,39 +96,38 @@ The aim of the project is to allow users to view and share their own recipes and
 + <img src="https://img.icons8.com/color/48/000000/css3.png"/> [CSS](https://en.wikipedia.org/wiki/CSS) - to styling the HTML.
 + <img src="https://img.icons8.com/color/48/000000/javascript.png"/> [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - to interactive web applications.
 + <img src="https://img.icons8.com/color/48/000000/python.png"/> [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - to run queries to the database.
-+ <img src="https://images91.fotosik.pl/495/94f9449ae6eadb99.png"/> [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine)) - as a templates engine for Python.
 
 ### Frameworks, Libraries & Programs
-
++ <img src="https://images91.fotosik.pl/495/94f9449ae6eadb99.png"/> [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine)) - as a templates engine for Python.
++ <img src="https://images92.fotosik.pl/496/ff9586f55010cb7e.png"> [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) - Flask running a Python server-baced project and depends on the Jinja template engine and the Werkzeug
++ <img src="https://images92.fotosik.pl/496/0e0b55372d3fa10f.png">[Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - to handle various utilities for WSGI applications, it comes with simple-to-use Security features
 + <img src="https://img.icons8.com/color/48/000000/mongodb.png"/> [mongoDB](https://en.wikipedia.org/wiki/MongoDB)  - NoSQL database used for backend database
 + <img src="https://images90.fotosik.pl/495/31f55faa8a7f0f25.png"/> [Materialize](https://materializecss.com/) - Used for responsive design and conforming to the Google material design language. 
-+ [Flask]
-+ [Heroku]
-+ [GitHub]
-+ [Balsamiq]
-+ [JQuery]
-+ [Google font](https://fonts.google.com/) - for font style.
-+ [Visual studio](https://visualstudio.microsoft.com) - console for writing code.
+
++ <img src="https://images90.fotosik.pl/496/9090f1a039521721.png">[Heroku](https://en.wikipedia.org/wiki/Heroku) - as a deploying cloud platform to supporting several programming languages
++ <img src="https://images91.fotosik.pl/495/349a636c9586126b.png">[GitHub](https://en.wikipedia.org/wiki/GitHub) - to create and host project
++ <img src="https://images89.fotosik.pl/496/b2208ad81e139641.png">[Balsamiq](https://en.wikipedia.org/wiki/Balsamiq) - to create wireframes during design process
++ <img src="https://images91.fotosik.pl/495/ff7e331eae631581.png">[JQuery](https://en.wikipedia.org/wiki/JQuery) - is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation
++ <img src="https://images90.fotosik.pl/496/ded7f996b572ca06.png">[Favicon](https://favicon.io/logo-generator/) - for logo generator
++ <img src="https://images91.fotosik.pl/495/b1d4fe3fd419b9da.png">[Google font](https://fonts.google.com/) - for font style.
++ <img src="https://images92.fotosik.pl/496/98be9f646b97e1fa.jpg">[Visual studio](https://visualstudio.microsoft.com) - console for writing code.
 
 ---
 # ***Testing***
 
-   ## To validate Java Script.
+### To validate Java Script.
+##### Warnings.
 
-#### Warnings.
 ### To validate CSS
-#### Warnings
-
+##### Warnings
 
 ### Lighthouse
 
+### Errors and fix
 
-## Errors and fix
+### Bugs and Problems
 
-
-## Bugs and Problems
-
- 
+ ---
 # ***Deployment***
 
 ## To create a repository:
@@ -160,6 +149,5 @@ The aim of the project is to allow users to view and share their own recipes and
 6. A green success message should appear in the "GitHub Pages" section with the link to the live preview of the project.
 
 ## Heroku
-
+---
 # ***Credits***
-
