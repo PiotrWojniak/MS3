@@ -5,8 +5,7 @@ Code Instytute - Milestone Project 3
 The assumption of the project is to show users how to prepare a meal easily and quickly. The recipes presented on the website contain information about which country they come from, what ingredients we need, a detailed description of how to prepare the dish and what equipment and utensils we need.
 
 # ***Website Showcase***
-
-
+---
 # ***UX***
 
 + ## Project goals
@@ -29,6 +28,7 @@ The aim of the project is to allow users to view and share their own recipes and
 | 8. | Only the administrator can moderate user input. The purpose of this assumption is to eliminate profanity that may appear in the comments or in the recipes themselves. | Only the administrator can moderate user input. The purpose of this assumption is to eliminate profanity that may appear in the comments or in the recipes themselves. |
 | 9. | Admin can add or change categories as needed. | Admin can add or change categories as needed.|
 
+--- 
 ### As a visitor I'd like to:
 1. Get easy and clear navigation betwain function.
 2. Find inspiration for meall.
@@ -65,15 +65,16 @@ The aim of the project is to allow users to view and share their own recipes and
 >### Admin
 1. Only the administrator can moderate user input. The purpose of this assumption is to eliminate profanity that may appear in the comments or in the recipes themselves.
 2. Admin can add or change categories as needed.
+---
 
 # ***Design***
 
 + Side map
-<img src="https://images91.fotosik.pl/495/a2aa1622e266aeb7.png">
+<img src="https://images91.fotosik.pl/495/835d72ca684976fa.png">
 
-## Colours
+### Colours
 
-<img src="https://images89.fotosik.pl/496/80e991d7eaa460f6.png">
+<img src="https://images92.fotosik.pl/496/d88fb2875b95a555.png">
 
 + Aero Blue #D6FFDC - Main background color
 + Lemon Yellow Crayola #FFFFB0 - Cards background, navbar, footer and brand text  color
@@ -81,7 +82,7 @@ The aim of the project is to allow users to view and share their own recipes and
 + Duke Blue #0300A3 - Headings and seperator color
 + Blood Red #680000 - Navbar and footer
 
-## Font
+### Font
 + Roboto:ital - to set as defoult style
 + Tangerine - to style all headings and paragraph - is very similar to the font using in old historical books.
 + Bodoni Moda - to style inside button text and navigation bar menu.
@@ -90,31 +91,36 @@ The aim of the project is to allow users to view and share their own recipes and
 ## Image
 
 ## Icon
-
+---
 # ***Features***
 
 ## Existing features
 
 
 ## Features left to implement
-
+---
 # ***Technology***
-## Languages
+### Languages
 
-1. [<img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/>HTML](https://en.wikipedia.org/wiki/HTML) - to creating structure and layout of the webpsite.
-1. [<img src="https://img.icons8.com/color/48/000000/css3.png"/> CSS](https://en.wikipedia.org/wiki/CSS) - to styling the HTML.
-1. [<img src="https://img.icons8.com/color/48/000000/javascript.png"/> JavaScript](https://en.wikipedia.org/wiki/JavaScript) - to interactive web applications.
-2. [<img src="https://img.icons8.com/color/48/000000/python.png"/>Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - to run queries to the database
-3. [<img src="https://images91.fotosik.pl/495/94f9449ae6eadb99.png"/>Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine)) - as a templates engine for Python
++ <img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/> [HTML](https://en.wikipedia.org/wiki/HTML) - to creating structure and layout of the webpsite.
++ <img src="https://img.icons8.com/color/48/000000/css3.png"/> [CSS](https://en.wikipedia.org/wiki/CSS) - to styling the HTML.
++ <img src="https://img.icons8.com/color/48/000000/javascript.png"/> [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - to interactive web applications.
++ <img src="https://img.icons8.com/color/48/000000/python.png"/> [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - to run queries to the database.
++ <img src="https://images91.fotosik.pl/495/94f9449ae6eadb99.png"/> [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine)) - as a templates engine for Python.
 
+### Frameworks, Libraries & Programs
 
-4. [mongoDB<img src="https://img.icons8.com/color/48/000000/mongodb.png"/>](https://en.wikipedia.org/wiki/MongoDB)  - NoSQL database used for backend database
-5. [Materialize<img src="https://images90.fotosik.pl/495/31f55faa8a7f0f25.png"/>](https://materializecss.com/) - Used for responsive design and conforming to the Google material design language.
-6. 
-8. [Google font](https://fonts.google.com/) - for font style.
-9. [Visual studio](https://visualstudio.microsoft.com) - console for writing code.
++ <img src="https://img.icons8.com/color/48/000000/mongodb.png"/> [mongoDB](https://en.wikipedia.org/wiki/MongoDB)  - NoSQL database used for backend database
++ <img src="https://images90.fotosik.pl/495/31f55faa8a7f0f25.png"/> [Materialize](https://materializecss.com/) - Used for responsive design and conforming to the Google material design language. 
++ [Flask]
++ [Heroku]
++ [GitHub]
++ [Balsamiq]
++ [JQuery]
++ [Google font](https://fonts.google.com/) - for font style.
++ [Visual studio](https://visualstudio.microsoft.com) - console for writing code.
 
-
+---
 # ***Testing***
 
    ## To validate Java Script.
