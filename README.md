@@ -100,17 +100,17 @@ The wireframe model is created as part of the project planning. Its task is to g
 ### Frameworks, Libraries & Programs
 + <img src="https://images91.fotosik.pl/495/94f9449ae6eadb99.png"/> [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine)) - as a templates engine for Python.
 + <img src="https://images92.fotosik.pl/496/ff9586f55010cb7e.png"> [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) - Flask running a Python server-baced project and depends on the Jinja template engine and the Werkzeug
-+ <img src="https://images92.fotosik.pl/496/0e0b55372d3fa10f.png">[Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - to handle various utilities for WSGI applications, it comes with simple-to-use Security features
++ <img src="https://images92.fotosik.pl/496/0e0b55372d3fa10f.png"> [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - to handle various utilities for WSGI applications, it comes with simple-to-use Security features
 + <img src="https://img.icons8.com/color/48/000000/mongodb.png"/> [mongoDB](https://en.wikipedia.org/wiki/MongoDB)  - NoSQL database used for backend database
 + <img src="https://images90.fotosik.pl/495/31f55faa8a7f0f25.png"/> [Materialize](https://materializecss.com/) - Used for responsive design and conforming to the Google material design language. 
-
-+ <img src="https://images90.fotosik.pl/496/9090f1a039521721.png">[Heroku](https://en.wikipedia.org/wiki/Heroku) - as a deploying cloud platform to supporting several programming languages
-+ <img src="https://images91.fotosik.pl/495/349a636c9586126b.png">[GitHub](https://en.wikipedia.org/wiki/GitHub) - to create and host project
-+ <img src="https://images89.fotosik.pl/496/b2208ad81e139641.png">[Balsamiq](https://en.wikipedia.org/wiki/Balsamiq) - to create wireframes during design process
-+ <img src="https://images91.fotosik.pl/495/ff7e331eae631581.png">[JQuery](https://en.wikipedia.org/wiki/JQuery) - is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation
-+ <img src="https://images90.fotosik.pl/496/ded7f996b572ca06.png">[Favicon](https://favicon.io/logo-generator/) - for logo generator
-+ <img src="https://images91.fotosik.pl/495/b1d4fe3fd419b9da.png">[Google font](https://fonts.google.com/) - for font style.
-+ <img src="https://images92.fotosik.pl/496/98be9f646b97e1fa.jpg">[Visual studio](https://visualstudio.microsoft.com) - console for writing code.
++ <img src="https://images90.fotosik.pl/496/0bfff63014e8ea32.png"> [RandomKeygen](https://randomkeygen.com/) - to generate password for flash and session function of flask
++ <img src="https://images90.fotosik.pl/496/9090f1a039521721.png"> [Heroku](https://en.wikipedia.org/wiki/Heroku) - as a deploying cloud platform to supporting several programming languages
++ <img src="https://images91.fotosik.pl/495/349a636c9586126b.png"> [GitHub](https://en.wikipedia.org/wiki/GitHub) - to create and host project
++ <img src="https://images89.fotosik.pl/496/b2208ad81e139641.png"> [Balsamiq](https://en.wikipedia.org/wiki/Balsamiq) - to create wireframes during design process
++ <img src="https://images91.fotosik.pl/495/ff7e331eae631581.png"> [JQuery](https://en.wikipedia.org/wiki/JQuery) - is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation
++ <img src="https://images90.fotosik.pl/496/ded7f996b572ca06.png"> [Favicon](https://favicon.io/logo-generator/) - for logo generator
++ <img src="https://images91.fotosik.pl/495/b1d4fe3fd419b9da.png"> [Google font](https://fonts.google.com/) - for font style.
++ <img src="https://images92.fotosik.pl/496/98be9f646b97e1fa.jpg"> [Visual studio](https://visualstudio.microsoft.com) - console for writing code.
 
 ---
 # ***Testing***
