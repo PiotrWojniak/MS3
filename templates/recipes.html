@@ -1,4 +1,4 @@
-{% extend "base.html" %}
+{% extends "base.html" %}
 {% block content %}
 
     {% for recipe in recipes %}
@@ -14,4 +14,4 @@
         {{ recipe.recipe_comments }}<br>
     {% endfor %}
 
-    {% endblock %}
+{% endblock %}
