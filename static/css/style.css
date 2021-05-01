@@ -5,3 +5,21 @@
 .flashes h4 {
     line-height: 2;
 }
+
+body {
+    height: 100%;
+    background-color: #D6FFDC;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #680000;
+
+main {
+    flex: 1 0 auto;
+}
