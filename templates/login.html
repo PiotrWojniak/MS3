@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Log in</h3>
+
+    <div class="row">
+        <form class="register col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
+            <div class="card-panel">
+                <!-- username -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user prefix light-blue-text text-darken-4"></i>
+                        <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="username">Username</label>
+                    </div>
+                </div>
+                <!-- password -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-key prefix light-blue-text text-darken-4"></i>
+                        <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <!-- login -->
+                <div class="row">
+                    <button type="submit" class="col s12 btn-large amber lighten-2 text-shadow">
+                        Log In <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="class s12">
+            <p class="center-align">
+                Not registered yet? 
+                <a href="{{ url_for('register') }}" class="text-darken-4">Register Account</a>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

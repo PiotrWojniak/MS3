@@ -9,7 +9,7 @@
                 <!-- username -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
+                        <i class="fas fa-user-alt prefix light-blue-text text-darken-4"></i>
                         <input id="username" name="username" type="text" minlength="5" maxlength="15"
                             pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="username">Username</label>
@@ -27,11 +27,19 @@
                 <!-- register -->
                 <div class="row">
                     <button type="submit" class="col s12 btn-large amber lighten-2 text-shadow">
-                        Register <i class="fas fa-sign-in-alt"></i>
+                        Register <i class="fas fa-user-plus"></i>
                     </button>
                 </div>
             </div>
         </form>
+    </div>
+    <div class="row">
+        <div class="class s12">
+            <p class="center-align">
+                Already Registered?? 
+                <a href="{{ url_for('login') }}" class="text-darken-4">Log In</a>
+            </p>
+        </div>
     </div>
 
 {% endblock %}
