@@ -23,7 +23,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Zero Waste</a></li>
                     <li><a href="{{ url_for('get_recipes')}}">Recipe</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="#">New recipe</a></li>
                     <li><a href="#">Log out</a></li>
                     <li><a href="{{ url_for('login') }}">Log in</a></li>
@@ -38,7 +38,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Zero Waste</a></li>
             <li><a href="{{ url_for('get_recipes') }}">Recipe</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="#">New recipe</a></li>
             <li><a href="#">Log out</a></li>
             <li><a href="{{ url_for('login') }}">Log in</a></li>

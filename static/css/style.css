@@ -19,6 +19,7 @@ body {
     bottom: 0;
     width: 100%;
     background-color: #680000;
+}
 
 main {
     flex: 1 0 auto;
