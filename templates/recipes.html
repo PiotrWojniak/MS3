@@ -2,16 +2,13 @@
 {% block content %}
 
     {% for recipe in recipes %}
-        {{ recipe.category_name }}<br>
+        {{ recipe.category }}<br>
+        {{ recipe.author }}<br>
         {{ recipe.recipe_name}}<br>
-        {{ recipe.recipe__description }}<br>
-        {{ recipe.recipe_image }}<br>
+        {{ recipe.description }}<br>
+        {{ recipe.image }}<br>
         {{ recipe.cooking_time }}<br>
         {{ recipe.servings }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.cooking_method }}<br>
-        {{ recipe.recipe_rating }}<br>
-        {{ recipe.recipe_comments }}<br>
     {% endfor %}
 
 {% endblock %}
