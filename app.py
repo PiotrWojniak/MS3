@@ -97,6 +97,24 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Home page
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+
+# Add new recipe
+@app.route("/new_recipe")
+def new_recipe():
+    return render_template("new_recipe.html")
+
+
+# View recipe information function
+@app.route("/view_recipe")
+def view_recipe():
+    return render_template("view_recipe.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

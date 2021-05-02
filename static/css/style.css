@@ -11,6 +11,7 @@ body {
     background-color: #D6FFDC;
     min-height: 100vh;
     flex-direction: column;
+    font-family: Roboto Slab;
 }
 
 .page-footer {
@@ -23,4 +24,9 @@ body {
 
 main {
     flex: 1 0 auto;
+}
+
+.recipe {
+    background-color: #FFFFB0;
+    font-family: Bodoni Moda;
 }
