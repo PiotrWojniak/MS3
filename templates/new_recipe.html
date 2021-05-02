@@ -4,11 +4,13 @@
     <h4 class="center-align">New Recipe</h4>
 
     <div class="row">
-        <div class="container recipe s12 m8 offset-m2"
+        <div class="container recipe s12 m8 offset-m2">
             <form class="col s12" method="POST" action="">
                 <div class="row">
                     <div class="input-field col s12 m4 offset-m4">
-                        <input id="recipe_name" type="text" minlenght="1" maxlenghts="15" class="validate">
+                        <i class="fas fa-pen-fancy prefix"></i>
+                        <input id="recipe_name" name="recipe_name" type="text" 
+                            minlenght="1" maxlenghts="15" class="validate" required>
                         <label for="recipe_name">Title</label>
                     </div>
                 </div>
@@ -25,7 +27,10 @@
                     </div>
                     <div class="input-field col s12 m4">
                         <input id="cooking_time" name="cooking_time" type="text" minlenght="1" maxlenghts="3" class="validate" required>
-                        <label for="cooking_time">Time in minutes</label>
+                        <label for="cooking_time">
+                            <i class="fas fa-hourglass-half"></i>
+                            Time in minutes
+                        </label>
                     </div>
                     <div class="input-field col s12 m4">
                         <input id="servings" name="servings" type="text" minlenght="1" maxlenghts="3" class="validate" required>
@@ -41,20 +46,29 @@
                 <!-- Add ingredients-->
                 <div class="row">
                     <div class="input-field col s12 m6 offset-m3">
-                        <input id="ingredients" name="ingredients" type="text" minlenght="1" maxlenghts="25" class="validate" required>
-                        <label for="ingredients">Ingredients</label>
+                        <textarea id="ingredients" name="ingredients" minlenght="1" maxlenghts="25" class="materialize-textarea validate" required></textarea>
+                        <label for="ingredients">
+                            <i class="fas fa-tasks"></i>
+                            Ingredients
+                        </label>
                     </div>
                 </div>
                 <!-- Add methods-->
                 <div class="row">
                     <div class="container">
                         <div class="input-field col s12 m6">
-                            <input id="preparation" name="preparation" type="text" minlenght="1" maxlenghts="50" class="validate" required>
-                            <label for="preparation">Preparation</label>
+                            <textarea id="preparation" name="preparation" minlenght="1" maxlenghts="50" class="materialize-textarea validate" required></textarea>
+                            <label for="preparation">
+                                <i class="fas fa-tasks"></i>
+                                Preparation
+                            </label>
                         </div>
                         <div class="input-field col s12 m6">
-                            <input id="steps" name="steps" type="text" minlenght="1" maxlenghts="15"class="validate">
-                            <label for="steps">Steps</label>
+                            <textarea id="steps" name="steps" minlenght="1" maxlenghts="15"class="materialize-textarea validate"></textarea>
+                            <label for="steps">
+                                <i class="fas fa-tasks"></i>
+                                Steps
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -70,7 +84,7 @@
                 <div class="row">
                     <div class="col s12 center-align">
                         <button type="submit" class="btn-small light-blue darken-1 text-shadow">
-                            Add Recipe <i class="fas fa-plus right"></i>
+                            Add Recipe <i class="fas fa-plus right prefix"></i>
                         </button>
                     </div>
                 </div>
