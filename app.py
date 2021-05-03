@@ -1,10 +1,12 @@
 import os
+
+from bson.objectid import ObjectId
 from flask import (
-    Flask, flash, render_template,
-    redirect, request, session, url_for)
+    Flask, flash, redirect, render_template,
+    request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from  werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -104,9 +106,27 @@ def home():
 
 
 # Add new recipe
-@app.route("/new_recipe")
+@app.route("/new_recipe", methods=["GET", "POST"])
 def new_recipe():
-    return render_template("new_recipe.html")
+    if request.method == "POST":
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "description": request.form.get("description"),
+            "image": requeste.form.get("image"),
+            "coocking_time": request.form.get("cooking_time"),
+            "servings": request.form.get("servings"),
+            "ingredients": request.form.getlist("ingredients"),
+            "preparation": request.form.getlist("preparation"),
+            "steps": request.form.getlist("steps"),
+            "author": session["user"]
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Your recipe is Successfully Added")
+        return redirect(url_for("new_recipe"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("new_recipe.html", categories=categories)
 
 
 # View recipe information function

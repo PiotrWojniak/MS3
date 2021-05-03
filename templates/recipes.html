@@ -1,33 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for recipe in recipes %}
-        {{ recipe.category }}<br>
-        {{ recipe.author }}<br>
-        {{ recipe.recipe_name}}<br>
-        {{ recipe.description }}<br>
-        {{ recipe.image }}<br>
-        {{ recipe.cooking_time }}<br>
-        {{ recipe.servings }}<br>
-    {% endfor %}
+  <h4 class="center-align">New Recipe</h4>
 
-    <div class="row">
-        {% for recipe in recipes %}
-        <div class="col s12 m4">
-          <div class="card recipe">
-            <div class="card-image">
-              <img src="{{ recipe.image }}" alt="Recipe image">
-              <span class="card-title">{{ recipe.recipe_name }}</span>
-            </div>
-            <div class="card-content">
-              <p>{{ recipe.description }}</p>
-            </div>
-            <div class="card-action">
-              <a href="{{ url_for('view_recipe') }}">Go cook</a>
-            </div>
-          </div>
+  <div class="row">
+    {% for recipe in recipes %}
+    <div class="col s12 m4">
+      <div class="card recipe">
+        <div class="card-image">
+          <img src="{{ recipe.image }}" alt="Recipe image">
         </div>
-        {% endfor %}
+        <div class="card-content">
+          <p>{{ recipe.recipe_name }}</p>
+        </div>
+        <div class="card-content">
+          <p>{{ recipe.description }}</p>
+          <p>{{ recipe.author }}</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('view_recipe') }}">Go cook</a>
+        </div>
       </div>
+    </div>
+    {% endfor %}
+  </div>
 
 {% endblock %}
