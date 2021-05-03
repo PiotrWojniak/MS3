@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="input-field col s12 m4 offset-m4">
                         <i class="fas fa-pen-fancy prefix"></i>
-                        <input id="recipe_name" name="recipe_name" type="text" 
+                        <input id="recipe_name" name="recipe_name" type="text"
                             minlenght="1" maxlenghts="15" class="validate" required>
                         <label for="recipe_name">Title</label>
                     </div>
@@ -20,7 +20,7 @@
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled selected>Choose Category</option>
                             {% for category in categories %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
                         </select>
                         <label for="category_name">Type of meal</label>
@@ -57,15 +57,14 @@
                 <div class="row">
                     <div class="container">
                         <div class="input-field col s12 m6">
-                            <textarea id="preparation" name="preparation" minlenght="1" 
-                            maxlenghts="50" class="materialize-textarea validate" required></textarea>
+                            <textarea id="preparation" name="preparation" minlenght="1" maxlenghts="50" class="materialize-textarea validate" required></textarea>
                             <label for="preparation">
                                 <i class="fas fa-tasks"></i>
                                 Preparation
                             </label>
                         </div>
                         <div class="input-field col s12 m6">
-                            <textarea id="steps" name="steps" minlenght="1" maxlenghts="50"class="materialize-textarea validate"></textarea>
+                            <textarea id="steps" name="steps" minlenght="1" maxlenghts="50"class="materialize-textarea validate" required></textarea>
                             <label for="steps">
                                 <i class="fas fa-tasks"></i>
                                 Steps
@@ -77,8 +76,8 @@
                 <div class="row form-row">
                     <div class="input-field col s12 m4 offset-m4">
                         <i id="photo-icon" class="fas fa-image">add photo</i>
-                        <input id="img_url" name="img_url" type="text" minlength="5" pattern="https://.*" class="validate" required />
-                        <label for="img_url"></label>
+                        <input id="image" name="image" type="text" minlength="5" pattern="https://.*" class="validate" required />
+                        <label for="image"></label>
                         <span class="helper-text" data-error="wrong" data-success="right">Please enter a valid URL.</span>
                     </div>
                 </div>
