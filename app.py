@@ -79,7 +79,7 @@ def login():
 
     return render_template("login.html")
 
-@app.route("/profil/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # take the user's session username from DB
     username = mongo.db.users.find_one(
@@ -113,8 +113,8 @@ def new_recipe():
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "description": request.form.get("description"),
-            "image": requeste.form.get("image"),
-            "coocking_time": request.form.get("cooking_time"),
+            "image": request.form.get("image"),
+            "cooking_time": request.form.get("cooking_time"),
             "servings": request.form.get("servings"),
             "ingredients": request.form.getlist("ingredients"),
             "preparation": request.form.getlist("preparation"),
