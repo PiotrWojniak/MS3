@@ -79,7 +79,7 @@ def login():
 
     return render_template("login.html")
 
-@app.route("/profil/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # take the user's session username from DB
     username = mongo.db.users.find_one(
@@ -113,26 +113,29 @@ def new_recipe():
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "description": request.form.get("description"),
-            "image": requeste.form.get("image"),
-            "coocking_time": request.form.get("cooking_time"),
+            "cooking_time": request.form.get("cooking_time"),
             "servings": request.form.get("servings"),
             "ingredients": request.form.getlist("ingredients"),
             "preparation": request.form.getlist("preparation"),
             "steps": request.form.getlist("steps"),
+            "image_url": request.form.get("image_url"),
             "author": session["user"]
         }
+        print("Recipes")
+        print(recipe)
         mongo.db.recipes.insert_one(recipe)
         flash("Your recipe is Successfully Added")
-        return redirect(url_for("new_recipe"))
+        return redirect(url_for("get_recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("new_recipe.html", categories=categories)
 
 
 # View recipe information function
-@app.route("/view_recipe")
-def view_recipe():
-    return render_template("view_recipe.html")
+@app.route("/view_recipe/<recipe_id>", methods=["GET"])
+def view_recipe(recipe_idrecipe_id):
+    recipe = mongo.db.recipes.find_one(({"_id": ObjectId(recipe_id)}))
+    return render_templates("view_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":
