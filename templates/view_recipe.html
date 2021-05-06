@@ -8,17 +8,37 @@
         <div class="card-content">
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
+        <!-- Card tab for display 3 category -->
         <div class="card-tabs">
             <ul class="tabs s12 m9">
-                <li class="tab"><a href="#test4">Ingredients</a></li>
-                <li class="tab"><a href="#test5">Preparation</a></li>
-                <li class="tab"><a href="#test5">Steps</a></li>
+                <li class="tab">
+                    <a href="#ingredients">Ingredients</a>
+                </li>
+                <li class="tab">
+                    <a href="#preparation">Preparation</a>
+                </li>
+                <li class="tab">
+                    <a href="#steps">Steps</a>
+                </li>
             </ul>
         </div>
-        <div class="card-content grey lighten-4">
-            <div id="ingredients">Test 1</div>
-            <div id="preparation">Test 2</div>
-            <div id="steps">Test 2</div>
+        <!--Ingredients tab-->
+        <div id="ingredients" class="col s12">
+            {% for ingredient in recipe.ingredients.splitlines() %}
+            <p>{{ ingredient }}</p>
+            {% endfor %}
+        </div>
+        <!-- Preparation tab -->
+        <div id="preperation" class="col s12">
+            {% for preparation in recipe.preparation.splitlines() %}
+            <p>{{ preparation }}</p>
+            {% endfor %}
+        </div>
+        <!-- Steps tab -->
+        <div id="steps" class="col s12">
+            {% for steps in recipe.steps.splitlines() %}
+            <p>{{ steps }}</p>
+            {% endfor %}
         </div>
     </div>
 
