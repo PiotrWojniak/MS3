@@ -1,24 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-  <h4 class="center-align">New Recipe</h4>
+  <h4 class="center-align">Recipes</h4>
 
   <div class="row">
     {% for recipe in recipes %}
     <div class="col s12 m4">
       <div class="card recipe">
         <div class="card-image">
-          <img src="{{ recipe.image }}" alt="Recipe image">
+          <img src="{{ recipe.image_url}}" alt="Recipe image">
         </div>
         <div class="card-content">
           <p>{{ recipe.recipe_name }}</p>
-        </div>
-        <div class="card-content">
           <p>{{ recipe.description }}</p>
           <p>{{ recipe.author }}</p>
         </div>
         <div class="card-action">
-          <a href="{{ url_for('view_recipe') }}">Go cook</a>
+          <a href="{{ url_for('view_recipe', recipe_id=recipe_id) }}">Go cook</a>
         </div>
       </div>
     </div>
