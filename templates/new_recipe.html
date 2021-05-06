@@ -3,18 +3,30 @@
 
     <h4 class="center-align">New Recipe</h4>
 
-    <div class="row">
-        <div class="container recipe s12 m8 offset-m2">
+    <div class="row recipe">
+        <div class="container s12">
             <form class="col s12" method="POST" action="{{ url_for('new_recipe') }}">
                 <div class="row">
                     <div class="input-field col s12 m4 offset-m4">
-                        <i class="fas fa-pen-fancy prefix"></i>
                         <input id="recipe_name" name="recipe_name" type="text"
-                            minlenght="1" maxlenghts="15" class="validate" required>
-                        <label for="recipe_name">Title</label>
+                            minlength="1" maxlengths="15" class="validate" required>
+                        <label for="recipe_name">
+                            <i class="fas fa-pen-fancy"></i>
+                            Title
+                        </label>
                     </div>
                 </div>
-                <!-- Choice meal type, cooking time, servings person-->
+                <div class="row">
+                    <div class="input-field col s12 m4 offset-m4">
+                        <input id="description" name="description" type="text"
+                            minlength="1" maxlengths="25" class="validate" required>
+                        <label for="description">
+                            <i class="fas fa-pen-fancy"></i>
+                            description
+                        </label>
+                    </div>
+                </div>
+                <!-- Choice meal type, cooking time, servings person -->
                 <div class="row">
                     <div class="input-field col s12 m4">
                         <select id="category_name" name="category_name" class="validate" required>
@@ -26,45 +38,53 @@
                         <label for="category_name">Type of meal</label>
                     </div>
                     <div class="input-field col s12 m4">
-                        <input id="cooking_time" name="cooking_time" type="text" minlenght="1" maxlenghts="3" class="validate" required>
+                        <input id="cooking_time" name="cooking_time" type="text" minlength="1" maxlengths="3" class="validate" required>
                         <label for="cooking_time">
                             <i class="fas fa-hourglass-half"></i>
                             Time in minutes
                         </label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Please enter a number.</span>
                     </div>
                     <div class="input-field col s12 m4">
-                        <input id="servings" name="servings" type="text" minlenght="1" maxlenghts="3" class="validate" required>
+                        <input id="servings" name="servings" type="text" minlength="1" maxlengths="2" class="validate" required>
                         <label for="servings">
                             <i class="fas fa-female"></i>
-                            <form style="display: inline-block">
                                 <i class="fas fa-male"></i>
-                            </form>
                             Serving
                         </label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Please enter a number.</span>
                     </div>
                 </div>
-                <!-- Add ingredients-->
+                <!-- Add ingredients and image -->
                 <div class="row">
-                    <div class="input-field col s12 m6 offset-m3">
-                        <textarea id="ingredients" name="ingredients" minlenght="1" maxlenghts="25" class="materialize-textarea validate" required></textarea>
+                    <div class="input-field col s12 m6">
+                        <textarea id="ingredients" name="ingredients" minlength="1" maxlengths="25" class="materialize-textarea validate" required></textarea>
                         <label for="ingredients">
                             <i class="fas fa-tasks"></i>
                             Ingredients
                         </label>
                     </div>
+                    <div class="input-field col s12 m6">
+                        <input id="image_url" name="image_url" type="text" minlength="5" pattern="https://.*" class="validate" required />
+                        <label for="image_url">
+                            <i id="photo-icon" class="fas fa-image"></i>
+                            Add photo in URL format
+                        </label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Please enter a direct URL to the Image.</span>
+                    </div>
                 </div>
-                <!-- Add methods-->
+                <!-- Add methods -->
                 <div class="row">
                     <div class="container">
                         <div class="input-field col s12 m6">
-                            <textarea id="preparation" name="preparation" minlenght="1" maxlenghts="50" class="materialize-textarea validate" required></textarea>
+                            <textarea id="preparation" name="preparation" minlength="1" maxlengths="50" class="materialize-textarea validate" required></textarea>
                             <label for="preparation">
                                 <i class="fas fa-tasks"></i>
                                 Preparation
                             </label>
                         </div>
                         <div class="input-field col s12 m6">
-                            <textarea id="steps" name="steps" minlenght="1" maxlenghts="50"class="materialize-textarea validate" required></textarea>
+                            <textarea id="steps" name="steps" minlength="1" maxlengths="50"class="materialize-textarea validate" required></textarea>
                             <label for="steps">
                                 <i class="fas fa-tasks"></i>
                                 Steps
@@ -72,19 +92,10 @@
                         </div>
                     </div>
                 </div>
-                <!--Image URL-->
-                <div class="row form-row">
-                    <div class="input-field col s12 m4 offset-m4">
-                        <i id="photo-icon" class="fas fa-image">add photo</i>
-                        <input id="image" name="image" type="text" minlength="5" pattern="https://.*" class="validate" required />
-                        <label for="image"></label>
-                        <span class="helper-text" data-error="wrong" data-success="right">Please enter a valid URL.</span>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col s12 center-align">
                         <button type="submit" class="btn-small light-blue darken-1 text-shadow">
-                            Add Recipe <i class="fas fa-plus right prefix"></i>
+                            Add Recipe <i class="fas fa-plus right"></i>
                         </button>
                     </div>
                 </div>
