@@ -45,7 +45,7 @@
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('new_recipe') }}">New recipe</a></li>
                 <li><a href="{{ url_for('logout') }}">Log out</a></li>
-             {% else %}
+            {% else %}
                 <li><a href="{{ url_for('login') }}">Log in</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
@@ -58,14 +58,14 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 class="light-yellow lighten-4 center-align">{{ message }}</h4>
+                        <h5 class="light-yellow lighten-4 center-align">{{ message }}</h5>
                     </div>
                 {% endfor %}
             {% endif %}
         {% endwith %}
     </section>
 
-    <main class="container"></main>
+    <main class="container">
         {% block content %}
         {% endblock %}
     </main>
