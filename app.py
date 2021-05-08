@@ -133,9 +133,9 @@ def new_recipe():
 
 # View recipe information function
 @app.route("/view_recipe/<recipe_id>", methods=["GET"])
-def view_recipe(recipe_idrecipe_id):
-    recipe = mongo.db.recipes.find_one(({"_id": ObjectId(recipe_id)}))
-    return render_templates("view_recipe.html", recipe=recipe)
+def view_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("view_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":
