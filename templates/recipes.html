@@ -6,9 +6,9 @@
   <div class="row">
     {% for recipe in recipes %}
     <div class="col s12 m4">
-      <div class="card recipe">
+      <div class="card small recipe_card">
         <div class="card-image">
-          <img src="{{ recipe.image_url}}" alt="Recipe image">
+          <img src="{{ recipe.image_url }}" alt="Recipe image">
         </div>
         <div class="card-content">
           <p>{{ recipe.recipe_name }}</p>
@@ -16,7 +16,7 @@
           <p>{{ recipe.author }}</p>
         </div>
         <div class="card-action">
-          <a href="{{ url_for('view_recipe', recipe_id=recipe_id) }}">Go cook</a>
+          <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">Go cook</a>
         </div>
       </div>
     </div>
