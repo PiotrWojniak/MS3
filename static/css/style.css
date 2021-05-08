@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: Roboto Slab;
+    color: #2E3340;
 }
 
 .page-footer {
@@ -25,8 +26,58 @@ body {
 main {
     flex: 1 0 auto;
 }
+h1, h2, h3, h4, h5 {
+    color:#0300A3
+}
 
-.recipe {
+.recipe_card {
     background-color: #FFFFB0;
     font-family: Bodoni Moda;
+    color: #2E3340;
+    margin-top: 10px;
+}
+
+/* recipe view */
+
+.main-view img {
+   width: 100%;
+   height: auto;
+   padding: 5px;
+}
+
+.recipe-header {
+    margin: 5px;
+    padding: 10px;
+}
+
+.col-content {
+    padding: 10px;
+}
+
+.row main-view {
+    margin-top: 20px;
+}
+
+.tabs {
+    background-color: transparent;
+}
+
+.tabs .tab a {
+    padding: 5px;
+    color: #0300A3;
+    background-color: transparent;
+}
+
+.tabs
+.indicator {
+    background-color: #680000;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a.active,
+.tabs .tab a:hover,
+.tabs .tab a:focus.active,
+.tabs .tab a:hover.active {
+    color: rgba(176, 11, 11, 1);
+    background-color: transparent;
 }

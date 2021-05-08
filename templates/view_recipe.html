@@ -1,44 +1,94 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="card recipe">
-        <div class="card-image">
-            <img src="#" alt="Recipe image">
-        </div>
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+    <div class="card recipe_card">
+        <div class="row main-view s12">
+            <h4 class="recipe-header center-align">{{ recipe.recipe_name }}</h4>
+            <div class="col s12 m6 left">
+                <div class="card-image">
+                    <img src="{{ recipe.image_url }}" alt="Recipe image">
+                </div>
+            </div>
+            <div class="col s12 m6 center-align">
+                <p class="recipe-desc">{{ recipe.description }}</p>
+            </div>
+            <div class="col s12 m6 center-align">
+                <div class="col s4 m4 col-content">
+                    <i class="fas fa-utensils"></i>
+                    <br>
+                    {{ recipe.category_name }}
+                </div>
+                <div class="col s4 m4 col-content">
+                    <i class="fas fa-hourglass-half"></i>
+                    <br>
+                    {{ recipe.cooking_time }}
+                </div>
+                <div class="col s4 m4 col-content">
+                    <i class="fas fa-female"></i>
+                        <i class="fas fa-male"></i>
+                    <br>
+                    {{ recipe.servings }}
+                </div>
+            </div>
         </div>
         <!-- Card tab for display 3 category -->
-        <div class="card-tabs">
-            <ul class="tabs s12 m9">
-                <li class="tab">
-                    <a href="#ingredients">Ingredients</a>
+        <div class="card-tab s12 center-align">
+            <ul class="tabs m6">
+                <li class="tab s4">
+                    <a href="#ingredients" class="active">Ingredients</a>
                 </li>
-                <li class="tab">
+                <li class="tab s4">
                     <a href="#preparation">Preparation</a>
                 </li>
-                <li class="tab">
+                <li class="tab s4">
                     <a href="#steps">Steps</a>
                 </li>
             </ul>
         </div>
         <!--Ingredients tab-->
         <div id="ingredients" class="col s12">
-            {% for ingredient in recipe.ingredients.splitlines() %}
-            <p>{{ ingredient }}</p>
-            {% endfor %}
+            {% if recipe.preparation|length > 0 %}
+            <ul class="collection">
+                {% for ingredient in recipe.ingredients %}
+                <li class="collection-item">
+                    <label>
+                        <input class="ingredient-check" type="checkbox">
+                        <span class="ingredient-text">{{ ingredient }}</span>
+                    </label>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </div>
         <!-- Preparation tab -->
-        <div id="preperation" class="col s12">
-            {% for preparation in recipe.preparation.splitlines() %}
-            <p>{{ preparation }}</p>
-            {% endfor %}
+        <div id="preparation" class="col s12">
+            {% if recipe.preparation|length > 0 %}
+            <ul class="collection">
+                {% for preparation in recipe.preparation %}
+                <li class="collection-item">
+                    <label>
+                      <input class="preparation-check" type="checkbox">
+                      <span class="preparation-text">{{ preparation }}</span>
+                    </label>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </div>
         <!-- Steps tab -->
         <div id="steps" class="col s12">
-            {% for steps in recipe.steps.splitlines() %}
-            <p>{{ steps }}</p>
-            {% endfor %}
+            {% if recipe.steps|length > 0 %}
+            <ul class="collection">
+                {% for step in recipe.steps %}
+                <li class="collection-item">
+                    <label>
+                      <input class="steps-check" type="checkbox">
+                      <span class="steps-text">{{ step }}</span>
+                    </label>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </div>
     </div>
 
