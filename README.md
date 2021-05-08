@@ -39,10 +39,10 @@ The aim of the project is to allow users to view and share their own recipes and
 <img src="https://images92.fotosik.pl/496/d88fb2875b95a555.png">
 
 + Aero Blue #D6FFDC - Main background color
-+ Lemon Yellow Crayola #FFFFB0 - Cards background, navbar, footer and brand text  color
++ Lemon Yellow Crayola #FFFFB0 - Cards and brand background color
 + Gunmetal #2E3340 - Default font color
-+ Duke Blue #0300A3 - Headings and separator color
-+ Blood Red #680000 - Navbar and footer
++ Duke Blue #0300A3 - Headings color
++ Blood Red #680000 - Navbar, footer, separator brand font colour
 
 ### Font
 + Irish growing - to set logo name
