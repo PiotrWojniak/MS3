@@ -2,6 +2,11 @@
     background-color: #680000;
 }
 
+.sidenav {
+    background-color: #D6FFDC;
+    height: calc(50% + 60px);
+}
+
 .flashes h4 {
     line-height: 2;
 }
@@ -26,15 +31,41 @@ body {
 main {
     flex: 1 0 auto;
 }
-h1, h2, h3, h4, h5 {
-    color:#0300A3
+h1, h2, h3, h4, h5, h6 {
+    color:#0300A3;
+    margin: 2px;
 }
+
+.btn-small {
+    width: 110px;
+    margin: 2px;
+    padding: 0px 5px;
+    color: #FFFFB0;
+    font-family: Bodoni Moda;
+    font-weight: 600;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+    background-color: #0300A3;
+}
+
+/* recipe card */
 
 .recipe_card {
     background-color: #FFFFB0;
     font-family: Bodoni Moda;
     color: #2E3340;
     margin-top: 10px;
+}
+
+.card .card-action {
+    padding: 10px;
+}
+
+.card .card-content p {
+    margin: 1px;
 }
 
 /* recipe view */
@@ -52,6 +83,15 @@ h1, h2, h3, h4, h5 {
 
 .col-content {
     padding: 10px;
+}
+
+/*.collection .collection-item {
+    background-color: inherit;
+}*/
+
+label {
+    color: #2E3340;
+    letter-spacing: .5px;
 }
 
 .row main-view {
@@ -80,4 +120,9 @@ h1, h2, h3, h4, h5 {
 .tabs .tab a:hover.active {
     color: rgba(176, 11, 11, 1);
     background-color: transparent;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: #0300A3;
+    font-weight: 600;
 }
