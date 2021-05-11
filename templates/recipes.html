@@ -6,7 +6,7 @@
   <div class="row">
     {% for recipe in recipes %}
     <div class="col s12 m4">
-      <div class="card medium recipe_card">
+      <div class="card small recipe_card">
         <div class="card-image">
           <img src="{{ recipe.image_url }}" alt="Recipe image">
         </div>
@@ -16,12 +16,6 @@
           <p>{{ recipe.description }}</p>
           <p><i class="fas fa-hourglass-half"></i>&nbsp;{{ recipe.cooking_time }}&nbsp;minutes</p>
         </div>
-        {% if session.user|lower == recipe.author|lower %}
-          <div class="card-action center-align">
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small green darken-1">Edit</a>
-            <a href="" class="btn-small red darken-4">Delate</a>
-          </div>
-        {% endif %}
       </div>
     </div>
     {% endfor %}
