@@ -31,9 +31,14 @@ body {
 main {
     flex: 1 0 auto;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.collapsible-header {
     color:#0300A3;
     margin: 2px;
+}
+
+.collapsible-header i{
+    color:#680000
 }
 
 .btn-small {
@@ -72,6 +77,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .card .card-content p {
     margin: 1px;
+}
+
+.hoverable:hover {
+    box-shadow: 0 8px 17px 0 rgb(104 0 0 / 80%),
+    0 6px 20px 0 rgb(104 0 0 / 89%);
 }
 
 /* recipe view */
