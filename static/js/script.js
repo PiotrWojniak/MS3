@@ -3,6 +3,8 @@ $(document).ready(function(){
     $('select').formSelect();
     $('.tabs').tabs();
     $('.modal').modal();
+    $('.parallax').parallax();
+    $('.collapsible').collapsible();
 
     /* Code copied from Materialize Form Validation lesson*/
 
