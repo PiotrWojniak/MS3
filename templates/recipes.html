@@ -24,8 +24,8 @@
   {% if recipes|length > 0 %}
   <div class="row">
     {% for recipe in recipes %}
-    <div class="col s12 m4">
-      <div class="card small recipe_card">
+    <div class="col s12 m4 xl3">
+      <div class="card small recipe_card hoverable">
         <div class="card-image">
           <img src="{{ recipe.image_url }}" alt="Recipe image">
         </div>
@@ -34,6 +34,7 @@
           <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-floating right waves-effect waves-dark light-blue darken-3">Cook</a>
           <p>{{ recipe.description }}</p>
           <p><i class="fas fa-hourglass-half"></i>&nbsp;{{ recipe.cooking_time }}&nbsp;minutes</p>
+          <p>{{ recipe.author }}</p>
         </div>
       </div>
     </div>
