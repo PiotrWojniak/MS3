@@ -12,10 +12,10 @@
           <label for="query">Search</label>
         </div>
         <div class="col s12">
-          <a href="{{ url_for('get_recipes') }}" class="red darken-2 btn-small horizontal-align text-shadow">Reset</a>
-          <button type="submit" class="btn-small light-blue darken-3 text-shadow">
+          <a href="{{ url_for('get_recipes') }}" class="red darken-2 btn-small hoverable horizontal-align text-shadow">Reset</a>
+          <button type="submit" class="btn-small light-blue hoverable darken-3 text-shadow">
             <i class="fas fa-search left"></i>Search
-          </button>
+          </button>  
         </div>
       </div>
     </form>
@@ -31,7 +31,7 @@
         </div>
         <div class="card-content">
           <h6>{{ recipe.recipe_name }}</h6>
-          <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-floating right waves-effect waves-dark light-blue darken-3">Cook</a>
+          <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-floating right hoverable light-blue darken-3">Cook</a>
           <p>{{ recipe.description }}</p>
           <p><i class="fas fa-hourglass-half"></i>&nbsp;{{ recipe.cooking_time }}&nbsp;minutes</p>
           <p>{{ recipe.author }}</p>
