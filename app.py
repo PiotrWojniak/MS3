@@ -97,9 +97,11 @@ def profile(username):
     # take the user's session username from DB
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    recipes = list(mongo.db.recipes.find({"author": username}))
 
-    if session["user"]:
-        return render_template("profile.html", username=username)
+    if "user" in session:
+        return render_template(
+            "profile.html", username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
@@ -122,9 +124,9 @@ def new_recipe():
             "description": request.form.get("description"),
             "cooking_time": request.form.get("cooking_time"),
             "servings": request.form.get("servings"),
-            "ingredients": request.form.getlist("ingredients"),
-            "preparation": request.form.getlist("preparation"),
-            "steps": request.form.getlist("steps"),
+            "ingredients": request.form.get("ingredients").split(","),
+            "preparation": request.form.get("preparation").split("\n"),
+            "steps": request.form.get("steps").split("\n"),
             "image_url": request.form.get("image_url"),
             "author": session["user"]
         }
@@ -148,9 +150,9 @@ def edit_recipe(recipe_id):
             "description": request.form.get("description"),
             "cooking_time": request.form.get("cooking_time"),
             "servings": request.form.get("servings"),
-            "ingredients": request.form.getlist("ingredients"),
-            "preparation": request.form.getlist("preparation"),
-            "steps": request.form.getlist("steps"),
+            "ingredients": request.form.get("ingredients").split(","),
+            "preparation": request.form.get("preparation").split("\n"),
+            "steps": request.form.get("steps").split("\n"),
             "image_url": request.form.get("image_url"),
             "author": session["user"]
         }
@@ -177,6 +179,12 @@ def delete_recipe(recipe_id):
 def view_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("view_recipe.html", recipe=recipe)
+
+
+# 404 ERROR
+@app.errorhandler(404)  
+def page_not_found(error):
+    return render_template("404error.html", error=error)
 
 
 if __name__ == "__main__":

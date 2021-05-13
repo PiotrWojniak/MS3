@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('.modal').modal();
     $('.parallax').parallax();
     $('.collapsible').collapsible();
+    $('.dropdown-trigger').dropdown();
 
     /* Code copied from Materialize Form Validation lesson*/
 
