@@ -128,6 +128,7 @@ The wireframe model is created as part of the project planning. Its task is to g
 ### Lighthouse
 
 ### Errors and fix
+1. List of Ingreadients, steps and preparation not display correctly - issue fixed in commit:c84b4ed79ab12eec94c8c9b2380fc15c8d32c8c4
 
 ### Bugs and Problems
 
@@ -155,3 +156,4 @@ The wireframe model is created as part of the project planning. Its task is to g
 ## Heroku
 ---
 # ***Credits***
+1. 404 templates and CSS style was made by Colorlib (https://colorlib.com)
