@@ -68,7 +68,7 @@ def login():
     if request.method == "POST":
         # check for existing username in DB
         existing_user = mongo.db.users.find_one(
-            {"username":request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()})
 
         if existing_user:
             # check hashed password matches user input
@@ -90,6 +90,7 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -159,7 +160,8 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, categories=categories)
 
 
 # Delete recipe
@@ -180,4 +182,4 @@ def view_recipe(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)     # zmienic na False podczas deploy albo submimport os
+            debug=True)  # zmienic na False podczas deploy os
