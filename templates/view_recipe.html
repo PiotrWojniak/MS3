@@ -10,9 +10,6 @@
                 </div>
             </div>
             <div class="col s12 m6 center-align">
-                <p class="recipe-desc">{{ recipe.description }}</p>
-            </div>
-            <div class="col s12 m6 center-align">
                 <div class="col s4 m4 col-content">
                     <i class="fas fa-utensils"></i>&nbsp;{{ recipe.category_name }}
                 </div>
@@ -24,6 +21,9 @@
                         <i class="fas fa-male"></i>
                         &nbsp;{{ recipe.servings }}
                 </div>
+            </div>
+            <div class="col s12 m6 center-align">
+                <p class="recipe-desc">{{ recipe.description }}</p>
             </div>
         </div>
         <!-- Card tab for display 3 category -->
@@ -42,7 +42,7 @@
         </div>
         <!--Ingredients tab-->
         <div id="ingredients" class="col s12">
-            {% if recipe.preparation|length > 0 %}
+            {% if recipe.ingredients|length > 0 %}
             <ul class="collection">
                 {% for ingredient in recipe.ingredients %}
                 <li class="collection-item">
