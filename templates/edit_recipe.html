@@ -76,7 +76,7 @@
                 <div class="input-field col s12 m8 offset-m2">
                     <textarea id="ingredients" name="ingredients" minlength="1" maxlengths="25"
                         class="materialize-textarea validate" required>
-                        {{- recipe.ingredients -}}
+                        {{- recipe.ingredients|join(list) -}}
                     </textarea>
                     <label for="ingredients">
                         <i class="fas fa-tasks"></i>
@@ -87,7 +87,7 @@
                 <div class="input-field col s12 m8 offset-m2">
                     <textarea id="preparation" name="preparation" minlength="1" maxlengths="50"
                         class="materialize-textarea validate" required>
-                        {{- recipe.preparation -}}
+                        {{- recipe.preparation|join(list) -}}
                     </textarea>
                     <label for="preparation">
                         <i class="fas fa-tasks"></i>
@@ -98,7 +98,7 @@
                 <div class="input-field col s12 m8 offset-m2">
                     <textarea id="steps" name="steps" minlength="1" maxlengths="50"
                         class="materialize-textarea validate" required>
-                        {{- recipe.steps -}}
+                        {{- recipe.steps|join(list) -}}
                     </textarea>
                     <label for="steps">
                         <i class="fas fa-tasks"></i>
