@@ -10,31 +10,34 @@
             </div>
         </div>
     </div>
-    {% for recipe in recipes %}
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header white-text light-blue darken-4 text-shadow">
-                    <p>{{ recipe.recipe_name }}</p>
-                </div>
-                <div class="collapsible-body">
-                    <strong>{{ recipe.category_name }}</strong>
+
+    <ul class="collapsible s12 m6 offset-m3">
+        {% for recipe in recipes %}
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <p>{{ recipe.recipe_name }}</p>
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ recipe.category_name }}</strong>
+                <div class="col s4">
                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small green darken-2">Edit</a>
                     <!-- Modal Trigger for delete button-->
                     <button data-target="{{ recipe._id }}" class="btn-small modal-trigger red darken-2">Delete</button>
                     <!-- Modal Structure for confirm deleting-->
                     <div id="{{ recipe._id }}" class="modal">
-                    <div class="modal-content">
-                        <h5>Want to delete this recipe, are you sure?</h5>
-                        <p>After deletion, recovery will not be possible</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" class="modal-close waves-effect waves-red green darken-2 btn-flat">Cancel</a>
-                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="del-btn light-yellow-text waves-light red darken-4 btn-flat">Delete</a>
-                    </div>
+                        <div class="modal-content">
+                            <h5>Want to delete this recipe, are you sure?</h5>
+                            <p>After deletion, recovery will not be possible</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="modal-close waves-effect waves-red green darken-2 btn-flat">Cancel</a>
+                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="del-btn light-yellow-text waves-light red darken-4 btn-flat">Delete</a>
+                        </div>
                     </div>
                 </div>
-            </li>
-        </ul>
-    {% endfor %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
