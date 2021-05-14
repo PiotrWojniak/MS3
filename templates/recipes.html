@@ -32,8 +32,8 @@
         <div class="card-content">
           <h6>{{ recipe.recipe_name }}</h6>
           <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-floating right hoverable light-blue darken-3">Cook</a>
-          <p>{{ recipe.description }}</p>
           <p><i class="fas fa-hourglass-half"></i>&nbsp;{{ recipe.cooking_time }}&nbsp;minutes</p>
+          <p>{{ recipe.category_name }}</p>
           <p>{{ recipe.author }}</p>
         </div>
       </div>
