@@ -29,6 +29,7 @@ def home():
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find().sort("added", 1))
+    recipes.reverse()
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -124,7 +125,7 @@ def new_recipe():
             "description": request.form.get("description"),
             "cooking_time": request.form.get("cooking_time"),
             "servings": request.form.get("servings"),
-            "ingredients": request.form.get("ingredients").split(","),
+            "ingredients": request.form.get("ingredients").split("\n"),
             "preparation": request.form.get("preparation").split("\n"),
             "steps": request.form.get("steps").split("\n"),
             "image_url": request.form.get("image_url"),
@@ -150,7 +151,7 @@ def edit_recipe(recipe_id):
             "description": request.form.get("description"),
             "cooking_time": request.form.get("cooking_time"),
             "servings": request.form.get("servings"),
-            "ingredients": request.form.get("ingredients").split(","),
+            "ingredients": request.form.get("ingredients").split("\n"),
             "preparation": request.form.get("preparation").split("\n"),
             "steps": request.form.get("steps").split("\n"),
             "image_url": request.form.get("image_url"),
