@@ -34,9 +34,6 @@
                     <a href="#ingredients" class="active">Ingredients</a>
                 </li>
                 <li class="tab s4">
-                    <a href="#preparation">Preparation</a>
-                </li>
-                <li class="tab s4">
                     <a href="#steps">Steps</a>
                 </li>
             </ul>
@@ -50,21 +47,6 @@
                     <label>
                         <input class="ingredient-check" type="checkbox">
                         <span class="ingredient-text">{{ ingredient }}</span>
-                    </label>
-                </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </div>
-        <!-- Preparation tab -->
-        <div id="preparation" class="col s12">
-            {% if recipe.preparation|length > 0 %}
-            <ul class="collection">
-                {% for preparation in recipe.preparation %}
-                <li class="collection-item">
-                    <label>
-                      <input class="preparation-check" type="checkbox">
-                      <span class="preparation-text">{{ preparation }}</span>
                     </label>
                 </li>
                 {% endfor %}
