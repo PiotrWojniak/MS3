@@ -3,10 +3,11 @@
 
   <h4 class="center-align">Recipes</h4>
 
+  <!-- Search in recipes -->
   <div class="row s12 m6 offset-m3">
     <form action="{{ url_for('search') }}" method="post">
       <div class="row halign-wrapper center-align" class="col s12 m8">
-        <div class="input-field col s12">
+        <div class="input-field col s10">
           <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
           <input type="text" name="query" id="query" minlength="3" class="validate" required>
           <label for="query">Search</label>
@@ -21,6 +22,7 @@
     </form>
   </div>
 
+  <!-- Recipe view card -->
   {% if recipes|length > 0 %}
   <div class="row">
     {% for recipe in recipes %}
@@ -34,7 +36,6 @@
           <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-floating right hoverable light-blue darken-3">Cook</a>
           <p><i class="fas fa-hourglass-half"></i>&nbsp;{{ recipe.cooking_time }}&nbsp;minutes</p>
           <p>{{ recipe.category_name }}</p>
-          <p>{{ recipe.author }}</p>
         </div>
       </div>
     </div>
