@@ -58,6 +58,15 @@ h1, h2, h3, h4, h5, h6,
 .btn-small:hover {
     background-color: #0300A3;
 }
+ /* Modal */
+
+.modal .modal-footer {
+    text-align: center;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    margin: 6px
+}
 
 /* recipe card */
 
@@ -145,6 +154,20 @@ a {
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
     font-weight: 600;
     color: antiquewhite;
+}
+
+/* Profile carousel */
+
+.carousel-item {
+    background-color: #FFFFB0;
+}
+
+.carousel .indicators .indicator-item {
+    background-color: #55a561;
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: #0300A3;
 }
 
 /* 404 error this style was made by Colorlib (https://colorlib.com) */
