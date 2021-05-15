@@ -7,7 +7,7 @@
         <div class="container s12">
             <form class="col s12" method="POST" action="{{ url_for('new_recipe') }}">
                 <div class="row">
-                    <div class="input-field col s12 m4 offset-m4">
+                    <div class="input-field col s12 m6 offset-m3">
                         <input id="recipe_name" name="recipe_name" type="text"
                             minlength="1" maxlengths="15" class="validate" required>
                         <label for="recipe_name">
@@ -17,9 +17,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s12 m4 offset-m4">
+                    <div class="input-field col s12 m6 offset-m3">
                         <input id="description" name="description" type="text"
-                            minlength="1" maxlengths="25" class="validate" required>
+                            minlength="1" maxlengths="100" class="validate" required>
                         <label for="description">
                             <i class="fas fa-pen-fancy"></i>
                             description
@@ -38,7 +38,7 @@
                         <label for="category_name">Type of meal</label>
                     </div>
                     <div class="input-field col s12 m4">
-                        <input id="cooking_time" name="cooking_time" type="text" minlength="1" maxlengths="3" class="validate" required>
+                        <input id="cooking_time" name="cooking_time" type="text" minlength="1" maxlengths="3" pattern="^[0-9]$" class="validate" required>
                         <label for="cooking_time">
                             <i class="fas fa-hourglass-half"></i>
                             Time in minutes
@@ -46,7 +46,7 @@
                         <span class="helper-text" data-error="wrong" data-success="right">Please enter a number.</span>
                     </div>
                     <div class="input-field col s12 m4">
-                        <input id="servings" name="servings" type="text" minlength="1" maxlengths="2" class="validate" required>
+                        <input id="servings" name="servings" type="text" minlength="1" maxlengths="2" pattern="^[0-9]$" class="validate" required>
                         <label for="servings">
                             <i class="fas fa-female"></i>
                                 <i class="fas fa-male"></i>
@@ -75,26 +75,15 @@
                     </div>
                 </div>
                 <!-- Add methods -->
-                <div class="row">
-                    <div class="container">
-                        <div class="input-field col s12 m6">
-                            <textarea id="preparation" name="preparation" minlength="1" maxlengths="50" class="materialize-textarea validate" required></textarea>
-                            <label for="preparation">
-                                <i class="fas fa-tasks"></i>
-                                Preparation
-                            </label>
-                            <span class="helper-text" data-error="wrong" data-success="right">Please enter each preparation in new line.</span>
-                        </div>
-                        <div class="input-field col s12 m6">
-                            <textarea id="steps" name="steps" minlength="1" maxlengths="50"class="materialize-textarea validate" required></textarea>
-                            <label for="steps">
-                                <i class="fas fa-tasks"></i>
-                                Steps
-                            </label>
-                            <span class="helper-text" data-error="wrong" data-success="right">Please enter each step in new line.</span>
-                        </div>
-                    </div>
+                <div class="input-field col s12 m6 offset-m3">
+                    <textarea id="steps" name="steps" minlength="1" maxlengths="50"class="materialize-textarea validate" required></textarea>
+                    <label for="steps">
+                        <i class="fas fa-tasks"></i>
+                        Steps
+                    </label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Please enter each step in new line.</span>
                 </div>
+                    
                 <div class="row">
                     <div class="col s12 center-align">
                         <a href="{{ url_for('get_recipes') }}" class="btn-small red hoverable darken-2 text-shadow">
