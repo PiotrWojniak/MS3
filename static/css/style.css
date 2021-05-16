@@ -164,6 +164,8 @@ label {
 
 a {
     color: #680000;
+    font-size: large;
+    font-weight: 600;
 }
 
 .tabs .tab a:focus,
