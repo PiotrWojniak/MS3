@@ -156,4 +156,9 @@ The wireframe model is created as part of the project planning. Its task is to g
 ## Heroku
 ---
 # ***Credits***
-1. 404 templates and CSS style was made by Colorlib (https://colorlib.com)
+####. 404 templates and CSS style was made by Colorlib (https://colorlib.com)
+####. Images 
+1. recipes
+   + Caramelized pear with ice cream - https://www.targislubne.pl/sn/media/foto_artykuly/agnieszka_kowal/karmelizowana_gruszka/strefa_narzeczonych_karmelizowana_gruszka_z_lodami.jpg
+   + Spicy Cajun Chicken - https://smaker.pl/przepisy-dania-glowne/przepis-pikantny-kurczak-cajun-obiad-w-30-minut,124711,codziennik-kulinarny.html
+   + Pasta with salmon and spinach - https://smaker.pl/przepisy-dania-glowne/przepis-makaron-z-lososiem-i-szpinakiem,109588,mimiwiki.html
