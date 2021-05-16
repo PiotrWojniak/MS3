@@ -1,16 +1,3 @@
-.nav-extended {
-    background-color: #680000;
-}
-
-.sidenav {
-    background-color: #D6FFDC;
-    height: calc(50% + 60px);
-}
-
-.flashes h4 {
-    line-height: 2;
-}
-
 body {
     display: flex;
     height: 100%;
@@ -22,6 +9,10 @@ body {
     color: #2E3340;
 }
 
+main {
+    flex: 1 0 auto;
+}
+
 .page-footer {
     left: 0;
     bottom: 0;
@@ -29,9 +20,32 @@ body {
     background-color: #680000;
 }
 
-main {
-    flex: 1 0 auto;
+/* Navbar */
+.nav-extended {
+    background-color: #680000;
 }
+
+.sidenav {
+    background-color: #D6FFDC;
+    height: calc(50% + 60px);
+}
+
+nav .brand-logo {
+    font-family: 'Irish Grover';
+    font-size: x-large;
+    color: #FFFFB0;
+    padding-left: 10px;
+}
+
+ul .brand-logo {
+    font-family: 'Irish Grover';
+    font-size: x-large;
+}
+
+.flashes h4 {
+    line-height: 2;
+}
+
 h1, h2, h3, h4, h5, h6,
 .collapsible-header {
     color:#0300A3;
@@ -75,6 +89,7 @@ h1, h2, h3, h4, h5, h6,
     font-family: Bodoni Moda;
     color: #2E3340;
     margin-top: 10px;
+    box-shadow: -6px 7px 1em #dddd92;
 }
 
 .btn-floating {
@@ -85,6 +100,7 @@ h1, h2, h3, h4, h5, h6,
 .card,
 .card .card-action {
     padding: 10px;
+    border-radius: 5px;
 }
 
 .card .card-content {
@@ -112,6 +128,14 @@ h1, h2, h3, h4, h5, h6,
 
 .col-content {
     padding: 10px;
+}
+
+#container-inner {
+    padding: 5px;
+    border-radius: 5px;
+    background: #0300a3;
+    color: #ffffb0;
+    margin-top: 20px;
 }
 
 label {
