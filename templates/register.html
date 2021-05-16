@@ -13,6 +13,7 @@
                         <input id="username" name="username" type="text" minlength="5" maxlength="15"
                             pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="username">Username</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Required minimum 5 letters.</span>
                     </div>
                 </div>
                 <!-- password -->
@@ -20,8 +21,9 @@
                     <div class="input-field col s12">
                         <i class="fas fa-key prefix light-blue-text text-darken-4"></i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15"
-                            pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                            pattern="^[a-zA-Z]{4,}[0-9]{1,}$" title="Password required minimum 4 letters and 1 digit" class="validate" required>
                         <label for="password">Password</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Password required minimum 4 letters and 1 digit.</span>
                     </div>
                 </div>
                 <!-- register -->

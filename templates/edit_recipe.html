@@ -44,7 +44,7 @@
                         <label for="category_name">Type of meal</label>
                     </div>
                     <div class="input-field col s12 m4">
-                        <input id="cooking_time" name="cooking_time" type="text" minlength="1" maxlengths="3" pattern="^[0-9]$"
+                        <input id="cooking_time" name="cooking_time" type="text" minlength="1" maxlengths="3" pattern="^[0-9]{1,}$"
                             value="{{ recipe.cooking_time }}" class="validate" required>
                         <label for="cooking_time">
                             <i class="fas fa-hourglass-half"></i>
