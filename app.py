@@ -33,6 +33,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Search function
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -40,6 +41,7 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Registration function
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -48,7 +50,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists")
+            flash("Username already exists please log in")
             return redirect(url_for("register"))
 
         register = {
@@ -64,6 +66,7 @@ def register():
     return render_template("register.html")
 
 
+# Login function
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -93,6 +96,7 @@ def login():
     return render_template("login.html")
 
 
+# Profile card
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # take the user's session username from DB
@@ -107,6 +111,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Logout and close user session
 @app.route("/logout")
 def logout():
     # remove session cookies

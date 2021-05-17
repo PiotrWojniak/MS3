@@ -1,79 +1,84 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="parallax-container">
-    <div class="parallax">
-        <img src="https://images90.fotosik.pl/501/d0a74e437bee79c4.jpg" alt="baking" target="_blank">
+    <!-- First image -->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="https://images90.fotosik.pl/501/d0a74e437bee79c4.jpg" alt="baking" target="_blank">
+        </div>
     </div>
-</div>
-<div class="section white">
-    <div class="row container">
-        <h2 class="header">Welcome to simple cooking</h2>
-        <p class="grey-text text-darken-3 lighten-3">Here you will find recipes that you can easily and 
-            quickly prepare in 30 minutes. Since we don't have much time to cook and shop, here are some 
-            tips on how to easily reduce waste.</p>
+    <!-- Main section -->
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">Welcome to simple cooking</h2>
+            <p class="grey-text text-darken-3 lighten-3">Here you will find recipes that you can easily and 
+                quickly prepare in 30 minutes. Since we don't have much time to cook and shop, here are some 
+                tips on how to easily reduce waste.</p>
+        </div>
     </div>
-</div>
-<div class="parallax-container">
-    <div class="parallax">
-        <img src="https://images92.fotosik.pl/501/fafd2d27dc1c2eef.jpg" alt="spices" target="_blank">
+    <!-- Second image -->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="https://images92.fotosik.pl/501/fafd2d27dc1c2eef.jpg" alt="spices" target="_blank">
+        </div>
     </div>
-</div>
-<div class="section white">
-    <div class="row container">
-        <h2 class="header">Zero Waste</h2>
-        <p class="grey-text text-medium text-darken-3 lighten-3">Every year, the average European throws away 16 tons of rubbish. 
-            As only 40% of waste is recyclable, landfills are getting bigger and more polluting our planet. 
-            From wasted food to plastic packaging, the kitchen is the biggest source of rubbish in our home. 
-            Check out some simple ways to reduce the amount of waste generated at the heart of every household.</p>
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header center-align"><i class="fas fa-caret-down"></i>Say NO to disposable foil packaging</div>
-                <div class="collapsible-body"><span>First, bring cotton (or reusable) bags for shopping. These plastic bags 
-                    can take up to 1,000 years to decompose!<br>Invest in special fruit and vegetable bags / nets. 
-                    Thanks to this, you will avoid plastic packaging from the supermarket.</span></div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="fas fa-caret-down" right></i>Be smart about recycling</div>
-                <div class="collapsible-body"><span>Unfortunately, the recycling of plastics reduces the quality
-                    of the material, which means that they are not transformed into new containers, but into cheap plastic 
-                    bags that eventually end up in a landfill. If possible, use glass or metal packaging as they 
-                    can be recycled without any loss in quality.<br>Try to give things a new life! Jam jars are 
-                    perfect for spices or pasta, you can make your own home-made olive oil in glass bottles.</span></div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="fas fa-caret-down" right></i>Learn how to throw away less food</div>
-                <div class="collapsible-body"><span>From freezing vegetables and fruits to drying meat, there are many ways 
-                    to avoid food waste. The freezer is your new weapon! Uneaten vegetables or fruit can be frozen whole 
-                    or blended, they will be perfect for soups and cocktails.<br>Place products with shorter expiry 
-                    dates closer to each other to prevent them from expiring.<br>Has the expiry date passed? 
-                    No worries! Most products are valid for up to 4 days after their expiry date. If the smell and texture 
-                    have not changed, you can safely use the product.</span></div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="fas fa-caret-down" right></i>Buy less and locally if possible</div>
-                <div class="collapsible-body"><span>Supermarkets encourage very large purchases, the most common cause 
-                    of food waste. Find local grocery stores and visit them regularly to buy fresh produce such as 
-                    fruit, vegetables, bread and meat. Also, give slightly bruised or imperfect fruit and vegetables 
-                    a chance - unfortunately, most of them end up in the basket.<br>Since keeping animals such as cows, 
-                    pigs and chickens has a huge impact on environmental pollution, try to limit meat products in your diet. 
-                    Choose recipes that use whole meat to keep it as little as possible in the basket.</span></div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="fas fa-caret-down" right></i>Creatively use leftovers</div>
-                <div class="collapsible-body"><span>Did you know you can use orange peel to keep mosquitoes away? And can 
-                    you easily turn potato peelings into chips? If you want your kitchen to be more zero-waste, 
-                    check what you can do with the leftovers after each cooking. The Internet can surprise 
-                    you pleasantly</span></div>
-            </li>
-        </ul>
-        <p>On our website, in the <a id="link-tab" href="{{ url_for('get_recipes')}}">recipes tab</a>, you will find some tips and solutions on what to do with leftovers.</p>
+    <!-- Zero waste section -->
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">Zero Waste</h2>
+            <p class="grey-text text-medium text-darken-3 lighten-3">Every year, the average European throws away 16 tons of rubbish. 
+                As only 40% of waste is recyclable, landfills are getting bigger and more polluting our planet. 
+                From wasted food to plastic packaging, the kitchen is the biggest source of rubbish in our home. 
+                Check out some simple ways to reduce the amount of waste generated at the heart of every household.</p>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header center-align"><i class="fas fa-caret-down"></i>Say NO to disposable foil packaging</div>
+                    <div class="collapsible-body"><span>First, bring cotton (or reusable) bags for shopping. These plastic bags 
+                        can take up to 1,000 years to decompose!<br>Invest in special fruit and vegetable bags / nets. 
+                        Thanks to this, you will avoid plastic packaging from the supermarket.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-caret-down" right></i>Be smart about recycling</div>
+                    <div class="collapsible-body"><span>Unfortunately, the recycling of plastics reduces the quality
+                        of the material, which means that they are not transformed into new containers, but into cheap plastic 
+                        bags that eventually end up in a landfill. If possible, use glass or metal packaging as they 
+                        can be recycled without any loss in quality.<br>Try to give things a new life! Jam jars are 
+                        perfect for spices or pasta, you can make your own home-made olive oil in glass bottles.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-caret-down" right></i>Learn how to throw away less food</div>
+                    <div class="collapsible-body"><span>From freezing vegetables and fruits to drying meat, there are many ways 
+                        to avoid food waste. The freezer is your new weapon! Uneaten vegetables or fruit can be frozen whole 
+                        or blended, they will be perfect for soups and cocktails.<br>Place products with shorter expiry 
+                        dates closer to each other to prevent them from expiring.<br>Has the expiry date passed? 
+                        No worries! Most products are valid for up to 4 days after their expiry date. If the smell and texture 
+                        have not changed, you can safely use the product.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-caret-down" right></i>Buy less and locally if possible</div>
+                    <div class="collapsible-body"><span>Supermarkets encourage very large purchases, the most common cause 
+                        of food waste. Find local grocery stores and visit them regularly to buy fresh produce such as 
+                        fruit, vegetables, bread and meat. Also, give slightly bruised or imperfect fruit and vegetables 
+                        a chance - unfortunately, most of them end up in the basket.<br>Since keeping animals such as cows, 
+                        pigs and chickens has a huge impact on environmental pollution, try to limit meat products in your diet. 
+                        Choose recipes that use whole meat to keep it as little as possible in the basket.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-caret-down" right></i>Creatively use leftovers</div>
+                    <div class="collapsible-body"><span>Did you know you can use orange peel to keep mosquitoes away? And can 
+                        you easily turn potato peelings into chips? If you want your kitchen to be more zero-waste, 
+                        check what you can do with the leftovers after each cooking. The Internet can surprise 
+                        you pleasantly</span></div>
+                </li>
+            </ul>
+            <p>On our website, in the <a id="link-tab" href="{{ url_for('get_recipes')}}">recipes tab</a>, you will find some tips and solutions on what to do with leftovers.</p>
+        </div>
     </div>
-</div>
-<div class="parallax-container">
-    <div class="parallax">
-        <img src="https://images90.fotosik.pl/501/8fd4127ab2eb374f.jpg" alt="vegetables" target="_blank">
+    <!-- Third image -->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="https://images90.fotosik.pl/501/8fd4127ab2eb374f.jpg" alt="vegetables" target="_blank">
+        </div>
     </div>
-</div>
 
 {% endblock %}

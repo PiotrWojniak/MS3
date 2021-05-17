@@ -27,7 +27,7 @@
                 <p>Created by:&nbsp;<strong>{{ recipe.author }}</strong></p>
             </div>
         </div>
-        <!-- Card tab for display 3 category -->
+        <!-- Card tab for display ingredient and steps -->
         <div class="card-tab s12 center-align">
             <ul class="tabs m6">
                 <li class="tab s4">
@@ -68,6 +68,7 @@
             </ul>
             {% endif %}
         </div>
+        <!-- Display edit and delete button for login user -->
         {% if session.user|lower == recipe.author|lower %}
         <div class="card-action center-align">
           <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small green hoverable darken-2">Edit</a>
