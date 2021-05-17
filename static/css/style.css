@@ -97,6 +97,11 @@ h1, h2, h3, h4, h5, h6,
     color: #FFFFB0;
 }
 
+.card-image img{
+    height: 200px;
+    object-fit: cover;
+}
+
 .card,
 .card .card-action {
     padding: 10px;
