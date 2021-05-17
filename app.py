@@ -186,7 +186,7 @@ def view_recipe(recipe_id):
 
 
 # 404 ERROR
-@app.errorhandler(404)  
+@app.errorhandler(404)
 def page_not_found(error):
     return render_template("404error.html", error=error)
 
@@ -194,4 +194,4 @@ def page_not_found(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)  # zmienic na False podczas deploy os
+            debug=False)
