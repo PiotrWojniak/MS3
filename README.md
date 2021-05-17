@@ -199,12 +199,24 @@ Walidated on Herroku app
 <img src="https://images91.fotosik.pl/502/2e67fe261d385602.png">
 </details>
 <details>
+   <summary>Testing Devices and web browser</summary>
+1. App was tested at Asus laptop, Macbook pro, custom PC, Samsung Galaxy A7, Iphone XS
+2. Browser used for testing:
+   + Chrome - no isuues
+   + Safari - no issues
+   + Edge - no issues
+   + Firefox - display is not smooth betwin opening and closing colapsable tabs in home page.
+</details>
+<details>
    <summary>Errors and fix</summary>
-1. List of Ingreadients, steps and preparation not display correctly - issue fixed in commit:c84b4ed79ab12eec94c8c9b2380fc15c8d32c8c4
-2. E125:80:5:continuation line with same indent as next logical line - For future fix
+1. List of Ingreadients, steps and preparation not display correctly - issue fixed in commit:c84b4ed79ab12eec94c8c9b2380fc15c8d32c8c4.
+2. E125:80:5:continuation line with same indent as next logical line - For future fix.
+1. Tabbed photos do not display the same size on medium resolution - issue fixed in commit: 32f8cfc64990811335d3be529a84f8dc4f084a61. 
+3. Firefox display issue will be fixed in future
 </details>
 <details>
    <summary>Bugs and Problems</summary>
+ 3. Firefox display issue will be fixed in future.
 </details>
 
  ---
