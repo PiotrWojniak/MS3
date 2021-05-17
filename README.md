@@ -19,7 +19,7 @@ The aim of the project is to allow users to view and share their own recipes and
 | 1. | Get easy and clear navigation between function | Switch between the functionality is provide by links button located on the top of the web page in navbar.|
 | 2. | Find inspiration for meal | The site presents different types of meals with different ingredients in the recipes tab. |
 | 3. | Know how to be more ecologically | ecological expectations are presented using zero waste techniques. |
-| 4. | View, sort and search for dish idea with out registration | View and search for idea of recipe is provided by clicking button recipe at the top of the page in navbar. <br/>- Users can search and sort the recipe after open the recipe view on the top. <br/>- Searching and sorting is by type, ingredient, country origin. |
+| 4. | View, sort and search for dish idea with out registration | View and search for idea of recipe is provided by clicking button recipe at the top of the page in navbar. <br/>- Users can search the recipe after open the recipe view on the top. <br/>- Searching by type, ingredient, country origin. |
 | 5. | Create an account to comments and shere my own recipe | Registration if providing by button login/register located in navbar. |
 |    | __As a registered user i'd like to:__ | |
 | 6. | Add, edit or deleting my recipe. | After logging in to the website, the user can add recipes after clicking the add recipe tab. <br/>- Adding and removing recipes posted by the user is possible after selecting the profile option, which is on the navigation bar. |
@@ -86,8 +86,46 @@ The wireframe model is created as part of the project planning. Its task is to g
 
 ## Existing features
 
++ ***Navigation Bar***
+
+The navigation bar works as intended. When you press on the website name it brings you directly to the home page. When you press on home it brings you to the home page. When choosing the recipes, it brings you to the recipe page. Log in brings the user to a page where he/she can log in and register brings you to page where you can create an account. After successfully logging in 3 more options will appear in the form of profile, new recipe and log out.
+
++ ***Home page***
+
+On the home page there is several graphics which can be scrolled up and down. There is also some information describing what the webpage includes. There is also several drop-down texts. When chosen the text will appear and when you press on a different one the pervious one disappears. There is also a link which brings you to the recipe page. 
+
++ ***Recipe page***
+
+When the recipe page is opened all the available recipes appear. The search bar works as intended and upon typing a keyword matching results will show up. When you hoover over a recipe it is highlighted to indicate it. 
+When you press the cook button on a chosen recipe it brings you to a page with all the details of the recipe along with an image of the finished dish. There are also 2 lists one with ingredients and the other with steps. Each list is functional, and each step or ingredient can be ticked off as you go to aid the preparation of a meal. 
+
++ ***Log In***
+
+In the log in page on can put in his credentials and log into the website. If a field is left blank it will be underlined in red. If incorrect credentials are put in, you will be informed something went wrong and you will be told to check that the details put in are correct. There is also a link that will bring you to the register page if you do not already have an account.  
+
++ ***Register***
+ 
+In the register page one can create an account by putting in a unique username and password. If a field is left blank it will be highlighted in red to indicate the missing credential. There is also a link that will bring you to the log in page if you already have an account.  
+
++ ***Profile page***
+
+After successfully logging in the profile page will appear. In profile there will be a list of all the recipes the user has added. From here the user can edit or delete any existing recipes. 
+
++ ***New Recipe***
+ 
+After logging in the new recipe page will appear. Here the user can add a new recipe to the website. 
+
++ ***Log out*** 
+
+When the user presses log out it successfully logs the user out and the 3 options from the navigation bar which are only available to users will disappear. 
 
 ## Features left to implement
+1. In respond to the user needs sorting will be added in the future.
+2. In respond to the user needs commenting recipes will be added later.
+3. Power user account will be added for full control of editing.
+4. Change login and register tab for modal/popup window.
+5. Add rating option for recipes.
+
 ---
 # ***Technology***
 <details>
@@ -118,19 +156,56 @@ The wireframe model is created as part of the project planning. Its task is to g
 
 ---
 # ***Testing***
+<details>
+   <summary>Validation</summary>
+   
+1. [**To validate Html**](https://validator.w3.org/)
+Walidated on Herroku app
+   + Warnings:
+      - Section lacks heading
+   
+   + Error 1:
+      - Attribute 'target' not allowed on element img. 
+      - Attribute 'right' not allowed on element i.
+   + Error fix:
+     - Bough errors fixed in commit: bae6d01831f4ee205f14553d4515534492b9ba8b
 
-### To validate Java Script.
-##### Warnings.
+2. [**To validate CSS**](https://jigsaw.w3.org/css-validator/)
 
-### To validate CSS
-##### Warnings
+   No Error Found.
+   
+3. [**To validate Js**](https://jshint.com/)
+   + Warnings:
+      - line 14	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+      - line 15	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+  
+      Warnings not affecting functionality
 
-### Lighthouse
+4. [**To validate Python using PEP8**](
+   + Errors:
+      - E125:80:5:continuation line with same indent as next logical line
+      
+</details>
+<details>
+   <summary>Lighthouse</summary>
+   
+   + Home
+<img src="https://images92.fotosik.pl/503/b5c82fc533d320d6.png">
 
-### Errors and fix
+   + Recipes
+<img src="https://images89.fotosik.pl/503/75327c2fd5f35593.png">
+   
+   + View Recipe
+<img src="https://images91.fotosik.pl/502/2e67fe261d385602.png">
+</details>
+<details>
+   <summary>Errors and fix</summary>
 1. List of Ingreadients, steps and preparation not display correctly - issue fixed in commit:c84b4ed79ab12eec94c8c9b2380fc15c8d32c8c4
-
-### Bugs and Problems
+2. E125:80:5:continuation line with same indent as next logical line - For future fix
+</details>
+<details>
+   <summary>Bugs and Problems</summary>
+</details>
 
  ---
 # ***Deployment***
@@ -154,11 +229,14 @@ The wireframe model is created as part of the project planning. Its task is to g
 6. A green success message should appear in the "GitHub Pages" section with the link to the live preview of the project.
 
 ## Heroku
+
 ---
 # ***Credits***
-####. 404 templates and CSS style was made by Colorlib (https://colorlib.com)
-####. Images 
-1. recipes
-   + Caramelized pear with ice cream - https://www.targislubne.pl/sn/media/foto_artykuly/agnieszka_kowal/karmelizowana_gruszka/strefa_narzeczonych_karmelizowana_gruszka_z_lodami.jpg
-   + Spicy Cajun Chicken - https://smaker.pl/przepisy-dania-glowne/przepis-pikantny-kurczak-cajun-obiad-w-30-minut,124711,codziennik-kulinarny.html
-   + Pasta with salmon and spinach - https://smaker.pl/przepisy-dania-glowne/przepis-makaron-z-lososiem-i-szpinakiem,109588,mimiwiki.html
+1. 404 templates and CSS style was made by Colorlib (https://colorlib.com)
+2. Images 
+   + recipes
+      + Caramelized pear with ice cream - https://www.targislubne.pl/sn/media/foto_artykuly/agnieszka_kowal/karmelizowana_gruszka/strefa_narzeczonych_karmelizowana_gruszka_z_lodami.jpg
+      + Spicy Cajun Chicken - https://smaker.pl/przepisy-dania-glowne/przepis-pikantny-kurczak-cajun-obiad-w-30-minut,124711,codziennik-kulinarny.html
+      + Pasta with salmon and spinach - https://smaker.pl/przepisy-dania-glowne/przepis-makaron-z-lososiem-i-szpinakiem,109588,mimiwiki.html
+3. Thank you to the tutors Alan and Jo for their patient help in solving the problem.
+4. Thank you to my mentor Adegbenga Adeye for his help and interest in my project
