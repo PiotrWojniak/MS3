@@ -5,6 +5,9 @@ Code Institute - Milestone Project 3
 The assumption of the project is to show users how to prepare a meal easily and quickly. The recipes presented on the website contain information about which country they come from, what ingredients we need, a detailed description of how to prepare the dish and what equipment and utensils we need.
 
 # ***Website Showcase***
+
+<img src="https://images89.fotosik.pl/503/36a0cad341058241.jpg">
+
 ---
 # ***UX***
 
@@ -81,6 +84,10 @@ The wireframe model is created as part of the project planning. Its task is to g
    <img src="https://images91.fotosik.pl/495/a21c5e0cc25c8c08.png">
 </details>
 
+### Differences between design and the end result
+
+1. Zero waste has been removed from the standalone page and moved to the main page as its section.
+
 ---
 # ***Features***
 
@@ -111,6 +118,10 @@ In the register page one can create an account by putting in a unique username a
 
 After successfully logging in the profile page will appear. In profile there will be a list of all the recipes the user has added. From here the user can edit or delete any existing recipes. 
 
++ ***Edit/Delete***
+
+After click edit button the edit card will appear. All the information in the card can be edited and confirm or cancel button is on the bottom of te form. When the user decide delete thay recipe the confimation window with message will apear. In this message user have 2 option cancel or delete. After use delete button the recipe is permanemtly removing from the side.
+
 + ***New Recipe***
  
 After logging in the new recipe page will appear. Here the user can add a new recipe to the website. 
@@ -118,6 +129,10 @@ After logging in the new recipe page will appear. Here the user can add a new re
 + ***Log out*** 
 
 When the user presses log out it successfully logs the user out and the 3 options from the navigation bar which are only available to users will disappear. 
+
++ ***404 Error page***
+
+404 error page is a custom page for a non-existing domain and is present with easy navigation button back to the home page.
 
 ## Features left to implement
 1. In respond to the user needs sorting will be added in the future.
@@ -240,7 +255,37 @@ Walidated on Herroku app
 5. Select "master branch" option
 6. A green success message should appear in the "GitHub Pages" section with the link to the live preview of the project.
 
-## Heroku
+## Heroku:
+
+1.	Create an account:
+   + In the browser type: Heroku.com.
+   + Click Sing up button on the top of web page.
+   + Filling the form and click create free account.
+   + Check email box for confirmation email. If email is not received in 15min check spam folder or contact Heroku directly.
+   + From the email click the link, then create new password and click the button below for Set password and log in.
+2.	Create an application:
+   + Click Create new app.
+   + In the create new app window we need to give the unique name to the app and in the name we cannot use spaces, but instead, use hyphens. Choose a region United States or Europe and then click the Create app button.
+3.	Install Heroku 
+   + In the terminal by typing in console: npm install -g Heroku
+4. Create requirements.txt and Procfile:
+   + In the terminal by typing in console: pip3 freeze --local > requirements.txt
+   + In the terminal by typing in console: echo web: python app.py > Procfile  - the Procfile must be assigned a capital P.
+5. Go back to the Heroku web and from app klick deploy tab and select the Deployment method 'GitHub'.
+6. Under Deployment method in Connecting to GitHub make sure your profile is display correctly and then your repository name and click 'Search'.
+7. Your Repo should be display below so click 'Connect' to connect.
+8. Go to the Settings tab and on Config Vars click Reveal Config Vars 
+   + Enter variebles Key and Value contained in the env.py file:
+      - IP
+      - PORT
+      - SECRET_KEY
+      - MONGO_URI
+      - MONGO_DBNAME
+ 9. Push requirements.txt and Procfile to the repository.
+ 10. Go back to Heroku Deploy section and croll down to the Automatic deploys and click 'Enable Automatic Deploys'.
+ 11. From Manual deploy section click 'Deploy Branch'.
+   + Heroku will now receive the code from GitHub and start building the app using the required packages.
+   + Once built the message apper 'Your app was successfully deployed' and you can click 'View' to launch your new app.
 
 ---
 # ***Credits***
